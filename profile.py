@@ -1,4 +1,11 @@
-__author__ = 'abhikseal'
+
+###############################################################################################
+### Generate text result of chemical search using 100,250,500 and 1000 molecules using
+### at different thresholds.
+### __author__ = 'abhikseal'
+### 1 Nov 2014
+### usage : python profile.py
+##############################################################################################
 import datetime
 import random
 import time
