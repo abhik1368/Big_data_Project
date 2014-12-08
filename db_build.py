@@ -1,3 +1,10 @@
+###############################################################################################
+### Adding fingerprints to mongodb database with RDKit chemical fingerprints
+### Abhik Seal
+### 1 Nov 2014
+### usage : python db_build.py --db chembldb --i chembl.sdf --tag chembl_id fpname mfp1 morgan
+##############################################################################################
+
 import uuid
 import pymongo
 from bson.binary import Binary
