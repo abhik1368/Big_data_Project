@@ -83,7 +83,7 @@ def genfp(mol,t,con,**param):
         q.append(mfp)
         q.append(len(mfp))
     else:
-        mfp = list(MACCSkeys.GenMACCSKeys(rdmol).GetOnBits())
+        mfp = list(MACCSkeys.GenMACCSKeys(mol).GetOnBits())
         q.append(mfp)
         q.append(len(mfp))
     start = time.time()
