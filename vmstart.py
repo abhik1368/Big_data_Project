@@ -1,6 +1,8 @@
-
-# Creating and starting the VMs
-# Number of VMs to open
+###############################################################################################
+###  Creating and starting the VMs  
+###  Abhik Seal
+###  1 Nov 2014
+###############################################################################################
 import cloudmesh
 import sys
 import os
