@@ -27,3 +27,9 @@ db.runCommand({enablesharding: "chembldb"});
 sh.shardCollection("chembldb.molecules", { "_id": "hashed" } )
 sh.shardCollection("chembldb.mfp1_counts", { "_id": "hashed" } )  
 ```
+
+To build a chemical database of fingerprints use the db\_build.py program in the codes folder. Before using db\_build program one needs to install the RDKit chemical toolkit . In ubuntu machines it is installed using 
+```
+sudo apt-get install python-rdkit librdkit1 rdkit-data
+```
+db\_build.py is a command line argument program where one can input .sdf,.sdf.gz and .smi format, the pattern of fingerprint, fingerprint length and fingerprint tag name . Currently morgan type, RDKFingerprint and rdkit maccs keys are supported. To use it install script Pymongo and RDKit need to be installed.To use automated generation of mongo database using db\_build.py check the snippet below.
