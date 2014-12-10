@@ -19,7 +19,8 @@ mongos --configdb config-1:27019 > -f /var/lib/mongos.conf
 </p>
 
 mongos runs on port 27017. Note that it does not need a data directory. Adding shards to the mongos is easy once in the shell the command below adds three shards,
-
+<p>
+<code>
 sh.addShard("server-1:27017,server-2:27017,server-3:27017")
 </code>
 </p>
@@ -28,7 +29,9 @@ Mongo DB won’t distribute your data automatically until we explicitly tell whi
 <p>
 <code>
 db.runCommand({enablesharding: "chembldb"});
+
 sh.shardCollection("chembldb.molecules", { "_id": "hashed" } )
+
 sh.shardCollection("chembldb.mfp1_counts", { "_id": "hashed" } )  
 </code>
 </p>
